@@ -1,3 +1,16 @@
-print("frases aleatórias")
-print("nada de novo")
-print("O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação com")
+class Aluno:
+    def __init__(self, idade):
+        self.idade = idade
+
+    def verifica_idade(self):
+        if self.idade > 18:
+            print("O aluno é maior de idade.")
+        else:
+            print("O aluno é menor de idade.")
+
+# Exemplo de uso da classe Aluno
+aluno1 = Aluno(20)
+aluno1.verifica_idade()  # Saída: O aluno é maior de idade.
+
+aluno2 = Aluno(16)
+aluno2.verifica_idade()  # Saída: O aluno é menor de idade.
