@@ -1,0 +1,1 @@
+print("frases aleatórias")
