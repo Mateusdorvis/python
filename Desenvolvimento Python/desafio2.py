@@ -1,0 +1,5 @@
+dia = int(input("Digite o dia que nasceu :"))
+mes = input("Digite o mês que nasceu :")
+ano = int(input("Digite o ano que nasceu :"))
+nome = input("digite seu nome :")
+print("Seja bem vindo {} !, você nasceu no dia {} de {} de {}".format(nome, dia, mes, ano))
