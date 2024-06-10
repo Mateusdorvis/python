@@ -7,3 +7,4 @@ elif x==y:
     print("iguais")
 else:
     print(f"{x} é maior que {y}")
+print("obrigado")
