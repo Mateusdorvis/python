@@ -1,0 +1,5 @@
+#condição exercíos 
+
+class Pessoa: 
+    
+
