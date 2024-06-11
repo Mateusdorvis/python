@@ -1,14 +1,14 @@
-class Animal:
+class Animal: #classe mãe 
     def __init__(self, nome: str, tipo: str, idade: int, cor_do_pelo: str, raca: str):
-        self.nome = nome
-        self.tipo = tipo
-        self.idade = idade
-        self.cor_do_pelo = cor_do_pelo
-        self.raca = raca
+        self.nome = nome  #objeto 1
+        self.tipo = tipo  #objeto 2
+        self.idade = idade  #objeto 3
+        self.cor_do_pelo = cor_do_pelo  #objeto 4
+        self.raca = raca   #objeto 5
 
-class Cachorro(Animal):#esta classe é herdeira da outra
+class Cachorro(Animal):#esta classe é herdeira (classe filha)da outra, logo é subclasse
     def __init__(self, nome: str, idade: int, cor_do_pelo: str, raca: str, som: str):
-        super().__init__(nome, tipo="Cachorro", idade=idade, cor_do_pelo=cor_do_pelo, raca=raca)
+        super().__init__(nome, tipo="Cachorro", idade=idade, cor_do_pelo=cor_do_pelo, raca=raca) #init da classe cachorro(herdeira da animal) e super () serve para classe herdeira (classe filha e subclasse), a primeira init é da classe mãe e a 2segunda init é da classe filha
         self.som = som
 
 # Exemplo de uso da classe Animal e Cachorro
