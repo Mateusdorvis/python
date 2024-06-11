@@ -6,7 +6,7 @@ class Animal:
         self.cor_do_pelo = cor_do_pelo
         self.raca = raca
 
-class Cachorro(Animal):
+class Cachorro(Animal):#esta classe é herdeira da outra
     def __init__(self, nome: str, idade: int, cor_do_pelo: str, raca: str, som: str):
         super().__init__(nome, tipo="Cachorro", idade=idade, cor_do_pelo=cor_do_pelo, raca=raca)
         self.som = som
