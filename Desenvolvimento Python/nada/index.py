@@ -11,4 +11,6 @@ pessoa3 = Pessoa("Pedro",19)
 
 lista_pessoa=[pessoa1,pessoa2, pessoa3]
 
-print(lista_pessoa[2])
+for pessoa in lista_pessoa:
+    print(f"Nome : {pessoa.nome}, Idade: {pessoa.idade}")
+#repete para 3 vezes
