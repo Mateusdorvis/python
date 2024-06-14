@@ -20,22 +20,22 @@ pygame.display.set_caption("Piano Simples")
 
 # Carregando sons das teclas
 sons = {
-    K_a: pygame.mixer.Sound("nota1.wav"),
-    K_s: pygame.mixer.Sound("nota2.wav"),
-    K_d: pygame.mixer.Sound("nota3.wav"),
-    K_f: pygame.mixer.Sound("nota4.wav"),
-    K_g: pygame.mixer.Sound("nota5.wav"),
-    K_h: pygame.mixer.Sound("nota6.wav"),
-    K_j: pygame.mixer.Sound("nota7.wav"),
+    K_a: pygame.mixer.Sound("nota1/do.wav"),
+    K_s: pygame.mixer.Sound("nota2/re.wav"),
+    K_d: pygame.mixer.Sound("nota3/mi.wav"),
+    K_f: pygame.mixer.Sound("nota4/fa.wav"),
+    K_g: pygame.mixer.Sound("nota5/sol.wav"),
+    K_h: pygame.mixer.Sound("nota6/la.wav"),
+    K_j: pygame.mixer.Sound("nota7/si.wav"),
    
 }
-do = pygame.mixer.Sound("nota1.wav")
-re = pygame.mixer.Sound("nota2.wav")
-mi = pygame.mixer.Sound("nota3.wav")
-fa = pygame.mixer.Sound("nota4.wav")
-sol = pygame.mixer.Sound("nota5.wav")
-la = pygame.mixer.Sound("nota6.wav")
-si = pygame.mixer.Sound("nota7.wav")
+do = pygame.mixer.Sound("nota1do.wav")
+re = pygame.mixer.Sound("nota2/re.wav")
+mi = pygame.mixer.Sound("nota3/mi.wav")
+fa = pygame.mixer.Sound("nota4/fa.wav")
+sol = pygame.mixer.Sound("nota5/sol.wav")
+la = pygame.mixer.Sound("nota6/la.wav")
+si = pygame.mixer.Sound("nota7/si.wav")
 
 def roda_musica():
     do.play()
