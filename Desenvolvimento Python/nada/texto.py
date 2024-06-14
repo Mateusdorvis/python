@@ -1,4 +1,4 @@
-class Shark:
+class Shark():
     def nadar(self): 
         print("Ele está nadando, cuidado !")
     def nadar_de_costas(self):
@@ -6,7 +6,7 @@ class Shark:
     def esqueleto(self):
         print("O esqueleto do tubarão é cartilagem")
 
-class Clowfish:
+class Clowfish():
     def nadar(self):
         print("o peixe palhaço está nadando")
     def nadar_de_costas(self):
@@ -16,6 +16,7 @@ class Clowfish:
 
 shark = Shark()
 shark.esqueleto()
-
 clowfish = Clowfish()
 clowfish.esqueleto()
+    
+    
