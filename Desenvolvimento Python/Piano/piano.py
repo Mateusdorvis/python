@@ -1,9 +1,9 @@
-import pygame
 import time
-from pygame.locals import *
+import pygame
+from pygame.locals import * #está importando coisas necessárias para lidar com gráficos
 
 # Inicialização do Pygame
-pygame.init()
+pygame.init()#inicializa o programa no pygame
 
 # Definindo as dimensões da janela
 largura = 800
@@ -26,21 +26,23 @@ sons = {
     K_f: pygame.mixer.Sound("nota4.wav"),
     K_g: pygame.mixer.Sound("nota5.wav"),
     K_h: pygame.mixer.Sound("nota6.wav"),
-    K_j: pygame.mixer.Sound("nota7.wav")
+    K_j: pygame.mixer.Sound("nota7.wav"),
+   
 }
 do = pygame.mixer.Sound("nota1.wav")
 re = pygame.mixer.Sound("nota2.wav")
 mi = pygame.mixer.Sound("nota3.wav")
 fa = pygame.mixer.Sound("nota4.wav")
-sol =pygame.mixer.Sound("nota5.wav")
+sol = pygame.mixer.Sound("nota5.wav")
 la = pygame.mixer.Sound("nota6.wav")
 si = pygame.mixer.Sound("nota7.wav")
 
-def roda_music():
+def roda_musica():
     do.play()
     time.sleep(0.5)
     re.play()
-    time.sleep(0.5)
+
+roda_musica()
 # Loop principal
 executando = True
 while executando:
