@@ -7,7 +7,7 @@ from casa1 import Casa
 principal = interface.Tk()
 principal.title("Informações do usuario")
 principal.geometry("480x360")
-casa = Casa("none", "none", "none", "none", "none", "none"
+casa = Casa("none", "none", "none", "none", "none", "none", "none"
 )
 #cor da casa
 mensagem = interface.Label(principal, text=casa.cor_da_casa_externo)
