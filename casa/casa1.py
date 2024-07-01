@@ -8,5 +8,5 @@ class Casa:
         self.numer_janelas = numer_janelas
         self.porta = n_porta
         self.comodo = n_comodo
-    def informacao(self):
-        dicionario = {"cor": f"{self.cor_da_casa_externo}"}
+
+
