@@ -7,28 +7,29 @@ from casa1 import Casa
 principal = interface.Tk()
 principal.title("Informações do usuario")
 principal.geometry("480x360")
-casa = Casa("none", "none", "none", "none", "none", "none", "none"
+casa = Casa("Laranja", 42, "Rua 2022 - Mario Quinatana, Porto Alegre", "Mateus", 8, 8, 5
 )
+
 #cor da casa
-mensagem = interface.Label(principal, text=casa.cor_da_casa_externo)
-mensagem.pack(side="top", fill="both")
+mensagem = interface.Label(principal, text=casa.cor_da_casa_externo, fg="orange", justify="center")
+mensagem.pack(side="left", fill="both")
 #numero da casa
 mensagem2 = interface.Label(principal, text=casa.numero_da_casa)
-mensagem2.pack(side="top", fill="both")
+mensagem2.pack(side="left", fill="both")
 #endereco
 mensagem3 = interface.Label(principal, text=casa.endereco)
-mensagem3.pack(side="top", fill="both")
+mensagem3.pack(side="left", fill="both")
 #proprietario
 mensagem4 = interface.Label(principal, text=casa.propreitario)
-mensagem4.pack(side="top", fill="both")
+mensagem4.pack(side="left", fill="both")
 #numero de comodos
 mensagem5 = interface.Label(principal, text=casa.numer_janelas)
-mensagem5.pack(side="top", fill="both")
+mensagem5.pack(side="left", fill="both")
 #numero de portas
 mensagem6 = interface.Label(principal, text=casa.porta)
-mensagem6.pack(side="top", fill="both")
+mensagem6.pack(side="left", fill="both")
 #numero de comodos
 mensagem7 = interface.Label(principal, text=casa.comodo)
-mensagem7.pack(side="top", fill="both")
+mensagem7.pack(side="left", fill="both")
 
 principal.mainloop()
