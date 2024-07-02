@@ -1,7 +1,23 @@
-callables = []
-a = ""
-for i in (1, 2, 3): #a é igual a 1 e 2 e i é igual a 3
-    callables.append(lambda a=i : a)
+import tkinter as tk
+from tkinter import ttk
 
-for f in callables:
-    print(f())
+# root window
+root = tk.Tk()
+root.geometry('300x200')
+root.resizable(False, False)
+root.title('Button Demo')
+
+# exit button
+exit_button = ttk.Button(
+    root,
+    text='Exit',
+    command=lambda: print("Não pode me chamar")
+)
+
+exit_button.pack(
+    ipadx=5,
+    ipady=5,
+    expand=True
+)
+
+root.mainloop()
