@@ -3,13 +3,14 @@ from tkinter import ttk
 
 window = tkt.Tk()
 window.title("Mudando as cores")
+window.geometry("400x400")
 
 texto = tkt.Label(window,text='Texto Aleatorio',font=("Arial sans", 15))
 texto.pack()
 
 
 #alterando a cor para vermelho
-btn1 = tkt.Button(window, text="alterar a janela o plano de fundo  paravermelho", command=lambda : window.config(background="#c21a01")) #lambada susbtiui a função que queria criar (def alterar_cor), na qual renderia linhas de códigos
+btn1 = tkt.Button(window, text="alterar a janela o plano de fundo  para vermelho", command=lambda : window.config(background="#c21a01")) #lambada susbtiui a função que queria criar (def alterar_cor), na qual renderia linhas de códigos
 btn1.pack(side="top")
 
 #alternado a cor de fundo para amarelo
@@ -17,11 +18,11 @@ btn2 = tkt.Button(window, text="alterar a janela o plano de fundo para amarelo",
 btn2.pack(side="top")
 
 #alternado a cor de fundo para azul
-btn3 = tkt.Button(window, text="alterar a janela o plano de fundo  paraazul", command=lambda : window.config(background="#066699"))
+btn3 = tkt.Button(window, text="alterar a janela o plano de fundo  para azul", command=lambda : window.config(background="#066699"))
 btn3.pack(side="top")
 
 #alternado a cor de fundo para laranja
-btn4 = tkt.Button(window, text="alterar a janela o plano de fundo  paralaranja", command=lambda : window.config(background="#e4491c"))
+btn4 = tkt.Button(window, text="alterar a janela o plano de fundo  para laranja", command=lambda : window.config(background="#e4491c"))
 btn4.pack(side="top")
 
 #alternado a cor de fundo para verde
