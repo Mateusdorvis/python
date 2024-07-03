@@ -4,7 +4,9 @@ from tkinter import ttk
 window = tkt.Tk()
 window.title("Mudando as cores")
 
-texto = tkt.Label(window, text="Estou dentro de uma janela")
+texto = tkt.Label(window,
+                   text='Texto Aleatorio', 
+                           font=("Arial", 12))
 texto.pack()
 
 
@@ -17,7 +19,7 @@ btn2 = tkt.Button(window, text="alterar a janela o plano de fundo amarelo", comm
 btn2.pack(side="top")
 
 #alternado a cor de fundo para azul
-btn3 = tkt.Button(window, text="alterar a janela o plano de fundo amarelo", command=lambda : window.config(background="#066699"))
+btn3 = tkt.Button(window, text="alterar a janela o plano de fundo azul", command=lambda : window.config(background="#066699"))
 btn3.pack(side="top")
 
 #alternado a cor de fundo para laranja
