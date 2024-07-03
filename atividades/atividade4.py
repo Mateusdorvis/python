@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+import os
 
 principal = tk.Tk()
 principal.title("atividade 4")
@@ -19,16 +20,13 @@ entrada2 = tk.Entry(principal, width=50)
 entrada2.pack(side="top")
 
 def enviar():
+    os.system("cls")
     entrada_de_dados_name= entrada1.get()
     entrada_de_dados_nascimento = entrada2.get()
     dado_completo = tk.Label(principal, text="Obrigado por transfirir suas informações")
     dado_completo.pack(side="top")
-    dicio_dados = {
-        "Nome completo do usuário cadastrado " : entrada_de_dados_name ,
-        "Data de nascimento completo do usuário cadastrado" : entrada_de_dados_nascimento
-    }
-    for a  in dicio_dados.items():
-        print(a)
+    print(  f"Nome completo do usuário cadastrado  : {entrada_de_dados_name }, Data de nascimento completo do usuário cadastrado : {entrada_de_dados_nascimento}")
+
 
 botao = tk.Button(principal, text="enviar os dados", command=enviar)
 botao.pack(side="top")
