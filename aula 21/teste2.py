@@ -7,7 +7,7 @@ janela.title("Place Layout Example")
 
 # Adicionando labels com posicionamento absoluto
 label1 = tk.Label(janela, text="Label 1", bg="red", fg="white")
-label1.place(x=400, y=200) #place 
+label1.place(x=0, y=0) #place 
 
 
 # Executar a aplicação
