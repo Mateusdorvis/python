@@ -3,7 +3,7 @@ from tkinter import ttk
 
 janela = tk.Tk()
 janela.title("Sorriso")
-janela.geometry("400x600")
+
 
 q1a= tk.Frame(janela, bg="black", width=100, height=100)
 q1a.place(x=550, y=500)
