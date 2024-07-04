@@ -3,12 +3,16 @@ from tkinter import ttk
 
 janela = tk.Tk()
 janela.title("Sorriso")
+janela.geometry("400x600")
 
 q1a= tk.Frame(janela, bg="black", width=100, height=100)
 q1a.place(x=550, y=500)
 
 q1 = tk.Frame(janela, bg="black", width=100, height=100)
 q1.place(x=600, y=550)
+
+q2a= tk.Frame(janela, bg="black", width=100, height=100)
+q2a.place(x=850, y=500)
 
 q2 = tk.Frame(janela, bg="black", width=100, height=100)
 q2.place(x=800, y=550)
