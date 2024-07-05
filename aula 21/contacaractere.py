@@ -18,13 +18,21 @@ def verifica(verifica):
         texto['state'] = 'disabled'
         msg.config(text="ultrapassou")
         msg.pack()
+        print("ultrapassou")
         
     else:
         msg.config(text="continue escrevendo")
         msg.pack()
+        print("continue escrevendo")
 
-# realizar <KeyRealase>
-
-texto.bind("<KeyRelease>", verifica)
     
+def deletar(deleta):
+    pegue_o_texto = texto.get('1.0','22.0')
+    apaga = texto.delete(t.END)
+    texto['state'] = 'normal'  
+    
+# realizar <KeyRealase>
+texto.bind("<KeyRelease>", verifica)
+
 main.mainloop()
+print("terminou")
