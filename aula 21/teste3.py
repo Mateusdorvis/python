@@ -9,7 +9,7 @@ def return_pressed(event):
 root = tk.Tk()
 
 btn = ttk.Button(root, text='Save')
-btn.bind('<Return>', return_pressed)
+btn.bind('<Key-a>', return_pressed)
 
 
 btn.focus()
