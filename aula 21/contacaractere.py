@@ -26,11 +26,7 @@ def verifica(verifica):
         print("continue escrevendo")
 
     
-def deletar(deleta):
-    pegue_o_texto = texto.get('1.0','22.0')
-    apaga = texto.delete(t.END)
-    texto['state'] = 'normal'  
-    
+
 # realizar <KeyRealase>
 texto.bind("<KeyRelease>", verifica)
 
