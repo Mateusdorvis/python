@@ -40,7 +40,7 @@ class App(tk.Tk):
        
         # Configura estilos personalizados
         style = ttk.Style()
-        style.configure("My.TFrame", background="red")
+        style.configure("My.TFrame", background="orange")
        
         scrollable_frame = ScrollableFrame(self)
         scrollable_frame.pack(fill=tk.BOTH, expand=True)
