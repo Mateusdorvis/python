@@ -11,11 +11,11 @@ root.grid_rowconfigure(0, weight=1)
 
 # create the text widget
 text = tk.Text(root, height=10)
-text.grid(row=0, column=0, sticky=tk.EW)
+text.grid(row=0, column=1, sticky=tk.EW)
 
 # create a scrollbar widget and set its command to the text widget
 scrollbar = ttk.Scrollbar(root, orient='vertical', command=text.yview)#yview faz com que a scroll bar mexa de forma vertical no texto
-scrollbar.grid(row=0, column=1, sticky=tk.NS)
+scrollbar.grid(row=0, column=0, sticky=tk.NS)
 
 #  communicate back to the scrollbar , sem isso a scrool bar não se mexe
 text['yscrollcommand'] = scrollbar.set
