@@ -1,2 +1,1 @@
-print("olá")
-print("teste")
+print("testando em 1, 2, 3, 4, 5")
