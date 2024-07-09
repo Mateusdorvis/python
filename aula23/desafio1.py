@@ -18,14 +18,8 @@ def perguntaAletoria(texto, linhalabel, linhaentrada):
     entrada_principal = tk.Entry(principal, width=20)
     entrada_principal.grid(row=linhaentrada, column=0, sticky='nsew')
 
-def funcao(entrada_principal):
-    pegue = entrada_principal.get()
-    lista = []
-    lista.append(pegue)
-    print(lista)
-    msg = tk.Label(principal, text="todas enviado com sucesso")
-    msg.grid(row=42, column=0, sticky='nsew')
-        
+
+
     
         
     
@@ -74,5 +68,13 @@ perguntaAletoria("Digite qual festa gosta de ir civil abaixo :", 36, 37)
 #pergunta 20
 perguntaAletoria("Digite seu doce favorito abaixo :", 38, 39)
 
-button = tk.Button(principal, text="enviar ", command=funcao)
+def enviar():
+    msg = tk.Label(principal, text="enviar")
+    msg.grid(row=41,column=0, sticky='nsew')
+    lista = []
+    lista.append(perguntaAletoria)
+    print(lista)
+    
+button = tk.Button(principal, command=enviar, text="enviar")
+button.grid(row=43,column=0, sticky='nsew')
 principal.mainloop()
