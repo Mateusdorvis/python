@@ -1,42 +1,33 @@
 import sqlite3
 
-conn =""
-def connect_data_base():#caminho do banco
-    db_name='exemplo.db'
-    global conn
-    conn = sqlite3.connect(db_name)#comando que conecta e cria o banco
-    create_table()
+# Conectar ao banco de dados (ou criar um novo)
+conn = sqlite3.connect('exemplo.db')
 
-def create_table():
-    cursor = conn.cursor()
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS usuarios (
-            id INTEGER PRIMARY KEY,
-            nome TEXT NOT NULL,
-            idade INTEGER
-        )
-    ''')
-    conn.commit()
+# Criar um cursor para executar comandos SQL
+cursor = conn.cursor()
 
-def inserir_usuario(nome, idade):
-    cursor = conn.cursor()
-    cursor.execute('''
-        INSERT INTO usuarios (nome, idade)
-        VALUES (?, ?)
-    ''', (nome, idade))
-    conn.commit()
+# Criar uma tabela
+cursor.execute('''
+    CREATE TABLE IF NOT EXISTS usuarios (
+        id INTEGER PRIMARY KEY,
+        nome TEXT NOT NULL,
+        idade INTEGER
+    )
+''')
 
-def selecionar_usuarios():
-    cursor = conn.cursor()
-    cursor.execute('SELECT * FROM usuarios')
-    return cursor.fetchall()
+# Inserir dados
+cursor.execute('''
+    INSERT INTO usuarios (nome, idade)
+    VALUES (?, ?)
+''', ('João', 30))
 
-def fechar_conexao():
-    conn.close()
+# Salvar (commit) as mudanças
+conn.commit()
 
-connect_data_base()
-create_table()
-inserir_usuario("abacate",35)
-print(selecionar_usuarios())
-fechar_conexao()
+# Selecionar e exibir os dados
+cursor.execute('SELECT * FROM usuarios')
+for row in cursor.fetchall():
+    print(row)
 
+# Fechar a conexão
+conn.close()
