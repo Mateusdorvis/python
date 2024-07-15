@@ -1,7 +1,7 @@
 import mariadb
 import sys
 import os
-
+from view.user_v import UsuarioView
 
 os.system('cls')
 class UsuarioModel:
@@ -44,9 +44,12 @@ class UsuarioModel:
         cursor.execute('SELECT * FROM usuarios')
         return cursor.fetchall()
     
-    def apagar_usuario(self, identificador):
+    #teste com de deletar com nome
+    def apagar_usuario(self, id):
         cursor = self.conn.cursor()
-        cursor.execute('DELETE FROM usuarios WHERE id = (?)', (identificador))
+        cursor.execute('''DELETE FROM usuarios
+                       WHERE id = ?
+                       ''', (id))
         self.conn.commit()
 
     def fechar_conexao(self):
@@ -60,4 +63,6 @@ if __name__ == "__main__":
     print("Usuários na tabela:")
     for usuario in usuarios:
         print(usuario)
+    modelo.apagar_usuario(12)
     modelo.fechar_conexao()
+    

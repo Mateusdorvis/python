@@ -15,6 +15,7 @@ if __name__ == "__main__":
     model = UsuarioModel() #
     view = UsuarioView(root) #
     controller = UsuarioController(view, model)
-
+    
+   
     root.mainloop()
     model.fechar_conexao()
