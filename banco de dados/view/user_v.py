@@ -25,6 +25,8 @@ class UsuarioView(tk.Frame):
        
         self.usuarios_listbox = tk.Listbox(self)
         self.usuarios_listbox.grid(row=3, column=0, columnspan=2, padx=10, pady=5, sticky="nsew")
+        
+        
        
         self.grid_rowconfigure(3, weight=1)
         self.grid_columnconfigure(1, weight=1)
