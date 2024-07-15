@@ -2,7 +2,7 @@ import mariadb
 import sys
 
 class UsuarioModel:
-    def __init__(self, db_name='exemplo', user='seu_usuario', password='sua_senha', host='localhost', port=3306):
+    def __init__(self, db_name='mateus_dorvis', user='mateusdorvis', password='12345', host='localhost', port=3306):
         try:
             self.conn = mariadb.connect(
                 user=user,
