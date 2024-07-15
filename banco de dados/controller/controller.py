@@ -1,3 +1,6 @@
+from view.user_v import UsuarioView
+from model.model import UsuarioModel
+
 class UsuarioController:
     def __init__(self, view, model):
         self.view = view

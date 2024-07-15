@@ -3,6 +3,8 @@ import os
 from model.model import UsuarioModel
 from view.user_v import UsuarioView
 from controller.controller import UsuarioController
+
+
 os.system('cls')
 if __name__ == "__main__":
     #este é o codigo principal e tmabém este modulo é principal

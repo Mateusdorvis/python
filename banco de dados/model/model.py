@@ -43,6 +43,11 @@ class UsuarioModel:
         cursor = self.conn.cursor()
         cursor.execute('SELECT * FROM usuarios')
         return cursor.fetchall()
+    
+    def apagar_usuario(self, id):
+        cursor = self.conn.cursor()
+        cursor.execute('DELETE FROM usuarios WHERE id = (?)', (id))
+        self.conn.commit()
 
     def fechar_conexao(self):
         self.conn.close()
