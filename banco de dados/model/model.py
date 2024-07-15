@@ -46,7 +46,7 @@ class UsuarioModel:
 
 # Exemplo de uso
 if __name__ == "__main__":
-    modelo = UsuarioModel(db_name='seu_banco', user='seu_usuario', password='sua_senha')
+    modelo = UsuarioModel(db_name='mateus_dorvis', user='mateusdorvis', password='12345')
     modelo.inserir_usuario('João', 25)
     usuarios = modelo.selecionar_usuarios()
     print("Usuários na tabela:")
