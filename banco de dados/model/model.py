@@ -1,8 +1,11 @@
 import mariadb
 import sys
+import os
 
+
+os.system('cls')
 class UsuarioModel:
-    def __init__(self, db_name='mateus_dorvis', user='mateusdorvis', password='12345', host='localhost', port=3306):
+    def __init__(self, db_name='mateusdorvis', user='Mateus_dorvis', password='12345', host='localhost', port=3306):
         try:
             self.conn = mariadb.connect(
                 user=user,
@@ -46,7 +49,7 @@ class UsuarioModel:
 
 # Exemplo de uso
 if __name__ == "__main__":
-    modelo = UsuarioModel(db_name='mateus_dorvis', user='mateusdorvis', password='12345')
+    modelo = UsuarioModel(db_name='mateusdorvis', user='Mateus_dorvis', password='12345')
     modelo.inserir_usuario('João', 25)
     usuarios = modelo.selecionar_usuarios()
     print("Usuários na tabela:")
