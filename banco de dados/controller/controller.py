@@ -21,8 +21,11 @@ class UsuarioController:
 
     def carregar_usuarios(self):
         usuarios = self.model.selecionar_usuarios()
-        for usuario in usuarios:
-            self.view.adicionar_usuario_lista(usuario)
+        id_number = self.model.selecionar_id()
+        for usuario, ids in usuarios, id_number:
+            self.view.adicionar_usuario_lista(usuario, ids)
+            
+
             
 
 if __name__ == "__main__":

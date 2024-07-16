@@ -44,6 +44,11 @@ class UsuarioModel:
         cursor.execute('SELECT * FROM usuarios')
         return cursor.fetchall()
     
+    def selecionar_id(self):
+        cursor = self.conn.cursor()
+        cursor.execute('SELECT id FROM usuarios')
+        return cursor.fetchall()
+    
     #teste com de deletar com nome
     def apagar_usuario(self, id):
         cursor = self.conn.cursor()
@@ -51,7 +56,9 @@ class UsuarioModel:
                        WHERE id = ?
                        ''', (id))
         self.conn.commit()
-
+    
+    
+        
     def fechar_conexao(self):
         self.conn.close()
 
@@ -63,6 +70,5 @@ if __name__ == "__main__":
     print("Usuários na tabela:")
     for usuario in usuarios:
         print(usuario)
-    modelo.apagar_usuario(12)
     modelo.fechar_conexao()
     
